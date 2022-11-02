@@ -11,3 +11,7 @@ include_directories(${GTEST_INCLUDE_DIRS})
 # Link runTests with what we want to test and the GTest and pthread library
 add_executable(toDoTests src/tests/tests.cpp)
 target_link_libraries(toDoTests ${GTEST_LIBRARIES} pthread)
+
+# Link runTests with what we want to test and the GTest and pthread library
+add_executable(tasksContainerTests src/tests/tasksContainerTests.cpp)
+target_link_libraries(tasksContainerTests ${GTEST_LIBRARIES} pthread)
