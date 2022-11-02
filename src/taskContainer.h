@@ -18,6 +18,7 @@ namespace pi
             TasksContainer();
 
             void add(char* date, char* task);
+            std::string retrieveByDate(char* date);
 
             inline short add_status() noexcept
             {

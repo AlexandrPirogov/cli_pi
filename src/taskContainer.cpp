@@ -14,3 +14,10 @@ void pi::TasksContainer::add(char* date, char* task)
     current_size++;
     current_add_status = ADD_STATUS_OK;
 };
+
+
+std::string pi::TasksContainer::retrieveByDate(char* date)
+{
+    std::string dateStr = std::string(date);
+    return tasks[dateStr];
+};
