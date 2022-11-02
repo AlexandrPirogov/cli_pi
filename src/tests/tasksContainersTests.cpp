@@ -2,7 +2,7 @@
 #include <memory>
 
 TEST(TasksContainerTests, CreatingTasksContainer) {
-    std::unique_ptr<pi::tasksContainer> taskContainer = std::make_unique<pi::tasksContainer>();
+    std::unique_ptr<pi::TasksContainer> taskContainer = std::make_unique<pi::TasksContainer>();
     ASSERT_EQ(taskContainer->size(), 0);
 }
  
