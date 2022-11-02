@@ -1,7 +1,9 @@
 #include <gtest/gtest.h>
+#include <memory>
 
-TEST(SquareRootTest, NegativeNos) {
-    ASSERT_EQ(1, 1);
+TEST(TasksContainerTests, CreatingTasksContainer) {
+    std::unique_ptr<pi::tasksContainer> taskContainer = std::make_unique<pi::tasksContainer>();
+    ASSERT_EQ(taskContainer->size(), 0);
 }
  
 int main(int argc, char **argv) {
