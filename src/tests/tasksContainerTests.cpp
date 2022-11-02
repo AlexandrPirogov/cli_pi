@@ -7,6 +7,14 @@ TEST(TasksContainerTests, CreatingTasksContainer) {
     std::unique_ptr<pi::TasksContainer> taskContainer = std::make_unique<pi::TasksContainer>();
     ASSERT_EQ(taskContainer->size(), 0);
 }
+
+TEST(TasksContainerTests, AddTaskInTaskContainer) {
+    std::unique_ptr<pi::TasksContainer> taskContainer = std::make_unique<pi::TasksContainer>();
+    ASSERT_EQ(taskContainer->add_status(), taskContainer->ADD_STATUS_NIL);
+    taskContainer->add("2022-01-01", "Do Homework");
+    ASSERT_EQ(taskContainer->size(), 1);
+    ASSERT_EQ(taskContainer->add_status(), taskContainer->ADD_STATUS_OK);
+}
  
 int main(int argc, char **argv) {
     testing::InitGoogleTest(&argc, argv);
