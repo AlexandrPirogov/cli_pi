@@ -15,6 +15,13 @@ TEST(TasksContainerTests, AddTaskInTaskContainer) {
     ASSERT_EQ(taskContainer->size(), 1);
     ASSERT_EQ(taskContainer->add_status(), taskContainer->ADD_STATUS_OK);
 }
+
+TEST(TasksContainerTests, RetrieveTaskInTaskContainer) {
+    std::unique_ptr<pi::TasksContainer> taskContainer = std::make_unique<pi::TasksContainer>();
+    taskContainer->add("2022-01-01", "Do Homework");
+    ASSERT_EQ(taskContainer->retrieveByDate("2022-01-01"), "Do Homework");
+    ASSERT_EQ(taskContainer->retrieveByDate("1990-01-01"), "Not found");
+}
  
 int main(int argc, char **argv) {
     testing::InitGoogleTest(&argc, argv);
