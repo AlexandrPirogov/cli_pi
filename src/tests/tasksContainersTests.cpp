@@ -1,4 +1,6 @@
 #include <gtest/gtest.h>
+#include "../taskContainer.h"
+#include "../taskContainer.cpp"
 #include <memory>
 
 TEST(TasksContainerTests, CreatingTasksContainer) {
