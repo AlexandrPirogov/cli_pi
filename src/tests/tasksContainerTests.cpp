@@ -20,7 +20,6 @@ TEST(TasksContainerTests, RetrieveTaskInTaskContainer) {
     std::unique_ptr<pi::TasksContainer> taskContainer = std::make_unique<pi::TasksContainer>();
     taskContainer->add("2022-01-01", "Do Homework");
     ASSERT_EQ(taskContainer->retrieveByDate("2022-01-01"), "Do Homework");
-    ASSERT_EQ(taskContainer->retrieveByDate("1990-01-01"), "Not found");
 }
  
 int main(int argc, char **argv) {
